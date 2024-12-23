@@ -1,2 +1,10 @@
 // Import Core Clean Blog SCSS
 @import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+
+body {
+    background-color: #252525;
+}
+
+a, h1, h2, h3, p, blockquote, span {
+    color: white;
+}
