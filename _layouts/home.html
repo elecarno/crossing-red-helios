@@ -22,42 +22,44 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
 
-        {{ content }}
+      <p>
+        Crossing Red-Helios is a storytelling and worldbuilding project set in a universe designed using the game Space Engineers. 
+        The primary story of CRH is released in a graphic novel comprised of in-game screenshots, with supplementary trailer videos 
+        and cinematic re-enactments of scenes from the graphic novel itself.
+      </p>
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="{{"/downloads" | relative_url }}">Read Crossing Red-Helios &rarr;</a>
+      </div>
+    </div>
+    
+    <div class="row-2">
+      <h1>New Draconic Republic</h1>
+      <div style="display: flex; flex-direction: row; justify-content: stretch; align-items: stretch;">
+        <div style="width: 50%;">
+          <p style="width: 90%;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quisquam ut perspiciatis, 
+            repudiandae nulla animi iste vel, praesentium repellendus molestias aliquid consequatur, 
+            earum rem qui error voluptates eius enim consequuntur!
           </p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
+        <img src="img/flag_ndr.png" style="width: 50%"></img>
+      </div>
+    </div>
 
+    <div class="row-2">
+      <h1 style="text-align: right;">Royal Guardian Union</h1>
+      <div style="display: flex; flex-direction: row; justify-content: stretch; align-items: stretch;">
+        <img src="img/flag_rgu.png" style="width: 50%"></img>
+        <div style="width: 50%;">
+          <p style="width: 90%; text-align: right; float: right">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quisquam ut perspiciatis, 
+            repudiandae nulla animi iste vel, praesentium repellendus molestias aliquid consequatur, 
+            earum rem qui error voluptates eius enim consequuntur!
+          </p>
+        </div>
       </div>
     </div>
   </div>
